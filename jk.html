@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=yes">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>郑州市中学地理学科成果资源服务平台</title>
+		<link rel="stylesheet" href="css/nivo.css" />
+		<link href="css/zzsc.css" rel="stylesheet" type="text/css" />
+	</head>
+
+	<body>
+		<div class="title">
+			<h1><img src="images/banner.png"><span></span></h1>
+		</div>
+		<div class="w1200">
+			<ul class="important cl">
+				<li class="rcsp_1 rcsp">
+					<a href="javascript:void(0)"><span></span></a>
+					<p>平台主页</p>
+					<strong style="display:none"><i></i></strong>
+				</li>
+				<li class="rcsp_2">
+					<a href="javascript:void(0)"><span></span></a>
+					<p>区域资源</p>
+					<strong style="display:none"><i></i></strong>
+				</li>
+				<li class="rcsp_3">
+					<a href="javascript:void(0)"><span></span></a>
+					<p>课例展示</p>
+					<strong style="display:none"><i></i></strong>
+				</li>
+				<li class="rcsp_4">
+					<a href="javascript:void(0)"><span></span></a>
+					<p>知识地图</p>
+					<strong style="display:none"><i></i></strong>
+				</li>
+				<li class="rcsp_5">
+					<a href="javascript:void(0)"><span></span></a>
+					<p>实践基地</p>
+					<strong style="display:none"><i></i></strong>
+				</li>
+				<li class="rcsp_6">
+					<a href="javascript:void(0)"><span></span></a>
+					<p>地理实践</p>
+					<strong style="display:none"><i></i></strong>
+				</li>
+				<li class="rcsp_7">
+					<a href="javascript:void(0)"><span></span></a>
+					<p>教科成果</p>
+					<strong><i></i></strong>
+				</li>
+				<li class="rcsp_8">
+					<a href="javascript:void(0)"><span></span></a>
+					<p>学生成果</p>
+					<strong style="display:none"><i></i></strong>
+				</li>
+				<li class="rcsp_9">
+					<a href="javascript:void(0)"><span></span></a>
+					<p>数据统计</p>
+					<strong style="display:none"><i></i></strong>
+				</li>
+				<li class="rcsp_10 rcsp">
+					<a href="login.html"><span></span></a>
+					<p>用户登录</p>
+					<strong style="display:none"><i></i></strong>
+				</li>
+			</ul>
+		</div>
+		<div class="contents">
+			<div class="directory">
+				<div class="dir_type">区域资源</div>
+				<div class="source_list">
+					<!--<div class="source_list_lv0">
+						<div class="source_top" folderId="123" onclick="getFolder(this);"><span class="floder_icon"></span><span><img src="images/floder.png"/></span><span>天地之中</span></div>
+					</div>-->
+				</div>
+
+			</div>
+			<div class="source_con">
+				<div class="source_area">
+					<ul class="source_btn">
+						<li fileType = "image" onclick="get_type(this)">图片</li>
+						<li fileType = "office" onclick="get_type(this)">文档</li>
+						<li fileType = "video" onclick="get_type(this)">视频</li>
+						<li fileType = "flash" onclick="get_type(this)">动画</li>
+						<li fileType = "geo" onclick="get_type(this)">数据</li>
+						<li fileType = "ppt" onclick="get_type(this)">课程</li>
+						<li class="search"><input type="text" placeholder="请输入搜索内容" /><button>搜索</button></li>
+					</ul>
+				</div>
+				<div class="show_area">
+					暂无内容
+					<!--<div class="show_item"><img src="images/9.jpg"/><p>图片</p></div>-->
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="footer">
+			<p><span>主办单位：郑州市教育局教学研究室 </span><span>豫ICP备：20020004 </span><span>技术支持：郑州兴雅教育科技有限公司</span></p>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="js/nav.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			var tabNum = $(".important").find("li");
+			var timer;
+			$(tabNum).each(function(index) {
+				$(this).hover(function() {
+					var that = $(this)
+					timer = window.setTimeout(function() {
+						that.find("a").css({
+							"background": "#FFF",
+							"color": "#fff"
+						});
+						that.find("strong").show();
+						that.siblings().find("strong").hide();
+						that.siblings().find("a").css({
+							"background": "#fff",
+							"color": "black"
+						});
+					}, 100)
+				}, function() {
+					window.clearTimeout(timer);
+				})
+			})
+		})
+		getSource();
+	</script>
+
+</html>
